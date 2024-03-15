@@ -37,7 +37,7 @@
 
 <script>
 import { ref, onMounted } from 'vue';
-import NoteCard from './NoteCard.vue';
+import NoteCard from '../components/NoteCard.vue';
 import NoteEdit from './NoteEdit.vue';
 
 export default {
