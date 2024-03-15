@@ -58,7 +58,7 @@ export default {
         id: 2,
         title: 'Image Note',
         description: 'This note has an image.',
-        imageUrl: 'path_to_some_image', // Replace with an actual image path
+        imageUrl: 'path_to_some_image', 
         type: 1
       },
       {
@@ -95,20 +95,17 @@ export default {
         title: '',
         description: '',
         type: parseInt(newNoteType.value),
-        imageUrl: '', // for image notes
-        checklist: [] // for checkbox notes
+        imageUrl: '', 
+        checklist: []
       };
-      // Customize note based on type
       if (newNote.type === 0) {
         newNote.title = 'Default Note';
         newNote.description = 'This is a default note';
       } else if (newNote.type === 1) {
-        // Set up specific fields for an image note
         newNote.title = 'Image Note';
         newNote.description = 'This is an image note';
-        newNote.imageUrl = 'default_image_url'; // Or collect this from user input
+        newNote.imageUrl = 'default_image_url'; 
       } else if (newNote.type === 2) {
-        // Set up specific fields for a checkbox note
         newNote.title = 'Checkbox Note';
         newNote.description = 'This is a checkbox note';
         newNote.checklist = [{ text: 'New Item', checked: false }];
@@ -131,11 +128,11 @@ export default {
     const handleUpdateNote = updatedNote => {
       const index = notes.value.findIndex(note => note.id === updatedNote.id);
       if (index !== -1) {
-        notes.value.splice(index, 1, updatedNote); // Update the note
-        saveNotesToLocalStorage(); // Save changes
-        emit('note-updated', true); // Can't emit event in setup
+        notes.value.splice(index, 1, updatedNote); 
+        saveNotesToLocalStorage(); 
+        emit('note-updated', true); 
       }
-      editingNote.value = null; // Reset the editing note
+      editingNote.value = null;
     };
 
     const saveNotesToLocalStorage = () => {
