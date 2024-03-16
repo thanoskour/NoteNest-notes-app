@@ -139,9 +139,15 @@ export default {
   margin-bottom: 10px;
 }
 
+
+.checklist-item input[type="checkbox"] {
+  margin-right: 0.5rem; 
+}
+
 .checklist-item input[type="text"] {
-  flex: 1;
+  flex-grow: 1; 
   margin-left: 10px;
+  
 }
 
 button {
