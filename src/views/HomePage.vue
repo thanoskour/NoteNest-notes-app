@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold text-center mb-6">Your Notes App</h1>
+    <h1 class="text-3xl font-bold text-center mb-6">NoteNest</h1>
     
     <div class="flex justify-center mb-4">
       <select v-model="newNoteType" class="border border-gray-300 p-2 rounded-lg mr-2">
